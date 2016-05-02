@@ -6,5 +6,4 @@ A node app that pull transaction data about the DAO (0xbb9bc244d798123fde783fcc1
 
 Run: ```npm start```
 
-
-laboratory one || peter chau
+Donations: 0x1A416af553Faca53b4be48DCFB6E749C9737455D
