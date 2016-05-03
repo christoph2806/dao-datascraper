@@ -18,6 +18,6 @@ Donations: 0x1A416af553Faca53b4be48DCFB6E749C9737455D
 5. Your .csv file can be found in the ```output/``` folder
 
 [Cloud9 IDE]: https://c9.io/c/JVUChbVycba
-[Latest Release]: https://github.com/PeterChauYEG/dao-datascraper/releases/tag/v1.0.0
+[Latest Release]: https://github.com/PeterChauYEG/dao-datascraper/releases/tag/v1.0.3
 [install node]: https://nodejs.org/en/
 [Powered by Etherscan.io APIs]: https://etherscan.io/apis
