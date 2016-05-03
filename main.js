@@ -2,16 +2,17 @@
 
 // require npm packages
 const bl = require('bl');
-const fs = require('fs');
 const https = require('https');
-const json2csv = require('json2csv');
+
+// require modules
+const exportAsCsv = require('./exportAsCsv.js');
 
 // set up variables
 // DAO Ethereum address
 const address = '0xbb9bc244d798123fde783fcc1c72d3bb8c189413';
 const date = new Date();
 // path/to/csv
-const output = `output/${date}.csv`;
+const outputPath = `output/${date}.csv`;
 // csv field headers
 const fields = ['blockNumber', 'timeStamp', 'hash', 'nonce', 'blockHash', 'transactionIndex', 'from', 'to', 'value', 'gas', 'gasPrice', 'input', 'contractAddress', 'cumulativeGasUsed', 'gasUsed', 'confirmations'];
 
@@ -38,27 +39,7 @@ https.get(`https://api.etherscan.io/api?module=account&action=txlist&address=${a
         const json = JSON.parse(data);
 
         // convert to csv
-        json2csv({
-            data: json["result"],
-            fields: fields
-        }, (err, csv) => {
-
-            if (err) {
-                process.stdout.write(`Error: ${err}\n`);
-            }
-
-            // export csv to output/
-            fs.writeFile(output, csv, (err) => {
-
-                if (err) {
-                    process.stdout.write(`Error: ${err}\n`);
-                }
-
-                process.stdout.write(`File saved: ${output}\n`);
-
-            });
-
-        });
+        exportAsCsv(json, fields, outputPath);
 
     }));
 

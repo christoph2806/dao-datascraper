@@ -14,7 +14,7 @@
   },
   "scripts": {
     "start": "node main.js",
-    "lint": "eslint main.js",
+    "lint": "eslint *.js",
     "test": "npm run lint && mocha --reporter spec"
   },
   "keywords": [
