@@ -1,5 +1,5 @@
 # DAO-datascraper
-
+[![Build Status](https://travis-ci.org/PeterChauYEG/dao-datascraper.svg?branch=master)](https://travis-ci.org/PeterChauYEG/dao-datascraper)
 
 A node app that pull transaction data about the DAO (0xbb9bc244d798123fde783fcc1c72d3bb8c189413) from Etherscan.io and exports it as a .csv file.
 
